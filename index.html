@@ -172,33 +172,55 @@
             
 
 <div class="page-header" id="Banco">
-    <h2 class="text-capitalize">Transferencia </h2>
-    <h4 class="text-capitalize">  <kbd>BBVA</kbd>  <br>  <br>
-     <button id="copyButton" onclick="copyToClipboard()">Copiar al Portapapeles</button>
-
-<script>
-    function copyToClipboard() {
-      const textToCopy = '4152313930423129';
+  <h2 class="text-capitalize">Transferencia</h2>
   
+  <!-- Banco Ejemplo 1 -->
+  <h4 class="text-capitalize">
+    <kbd>BBVA</kbd>
+    <br><br>
+    <p>Clave de transferencia: <strong>4152313930423129</strong></p>
+    <button id="copyButton" onclick="copyToClipboard()">Copiar al Portapapeles</button>
+  </h4>
+
+  <script>
+    function copyToClipboard() {
+      // Clave real de BBVA
+      const textToCopy = '4152313930423129';
+      
       navigator.clipboard.writeText(textToCopy)
-       
+        .then(() => {
+          alert('Clave copiada al portapapeles: ' + textToCopy);
+        })
+        .catch(err => {
+          console.error('Error al copiar la clave:', err);
+        });
     }
   </script>
 
-<h4 class="text-capitalize"><kbd>Banamex</kbd> <br>  <br>
-    <button id="copyButton" onclick="copyToClipboarddd()">Copiar al Portapapeles</button>
+  <!-- Banco Ejemplo 2 -->
+  <h4 class="text-capitalize">
+    <kbd>Banamex</kbd>
+    <br><br>
+    <p>Clave de transferencia: <strong>5204165882516697</strong></p>
+    <button id="copyButton2" onclick="copyToClipboardBanamex()">Copiar al Portapapeles</button>
+  </h4>
 
-    <script>
-        function copyToClipboarddd() {
-          const textToCopy = '5204165882516697';
+  <script>
+    function copyToClipboardBanamex() {
+      // Clave real de Banamex
+      const textToCopy = '5204165882516697';
       
-          navigator.clipboard.writeText(textToCopy)
-           
-        }
-      </script>
-        
+      navigator.clipboard.writeText(textToCopy)
+        .then(() => {
+          alert('Clave copiada al portapapeles: ' + textToCopy);
+        })
+        .catch(err => {
+          console.error('Error al copiar la clave:', err);
+        });
+    }
+  </script>
 </div>
-  
+
 
   
 
